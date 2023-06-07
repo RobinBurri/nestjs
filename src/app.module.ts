@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CustomersModule } from './customers/customers.module';
+import { User } from './typeorm/User';
 import { UsersModule } from './users/users.module';
 
 
@@ -13,7 +14,7 @@ import { UsersModule } from './users/users.module';
       username: "nestjs",
       password: "nestjs",
       database: "nestjs",
-      entities:  [],
+      entities:  [User],
       synchronize: true
     }
   )],
